@@ -23,13 +23,13 @@ const Editor = ({ entry }) => {
       <div className="w-max px-10 cursor-default py-4 rounded-md my-2 bg-gradient-to-br from-slate-800 via-slate-900 to-blue-950">
         {isLoading ? "Saving..." : "Continue Writing!"}
       </div>
-      <div className=" h-[90%] grid grid-cols-4">
+      <div className=" h-[90%] flex flex-col-reverse md:grid grid-cols-4">
         <textarea
-          className="p-3 h-full w-full col-span-3 bg-gradient-to-br from-black via-slate-950 to-blue-950  text-white/80  border-blue-950 border-2 outline-none rounded-md"
+          className="p-3 h-full min-h-[400px] w-full col-span-3 bg-gradient-to-br from-black via-slate-950 to-blue-950  text-white/80  border-blue-950 border-2 outline-none rounded-md"
           value={value}
           onChange={(e) => setValue(e.target.value)}
         />
-        <div className="col-span-1 pl-3 ">
+        <div className="col-span-1 sm:pl-3 sm:my-0 my-3">
           <div className="h-full w-full p-3 bg-gradient-to-br overflow-y-auto overflow-x-auto from-slate-900 via-black to-gray-950  text-white/80  border-blue-950 border-2 outline-none  rounded-md">
             <div
               style={{ backgroundColor: analysis?.color }}

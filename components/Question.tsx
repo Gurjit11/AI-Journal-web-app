@@ -30,7 +30,7 @@ const Question = () => {
 
   return (
     <div className="flex flex-col justify-center items-center">
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="sm:p-0 p-3 gap-2">
         <input
           type="text"
           value={question}
@@ -41,7 +41,7 @@ const Question = () => {
         />
         <button
           disabled={loading}
-          className="bg-gradient-to-tr from-blue-800 via-blue-800 to-blue-950 hover:via-blue-700 text-white font-semibold py-2 px-4 rounded"
+          className="bg-gradient-to-br from-slate-600 via-slate-900 to-blue-950 sm:w-fit w-full text-white font-semibold py-2 px-4 rounded"
           type="submit"
         >
           Ask
@@ -50,7 +50,7 @@ const Question = () => {
       {loading && <p className="text-white">AI is thinking...</p>}
       {response && (
         <div className="mt-4">
-          <div className="flex">
+          <div className="flex pb-2">
             <Image src={img} height={25} width={25} alt="ChatGPT:" />{" "}
             <button
               onClick={handleClear}
@@ -59,7 +59,7 @@ const Question = () => {
               Clear
             </button>
           </div>
-          <p className="text-white/80 max-h-[300px] max-w-3xl overflow-y-auto">
+          <p className="text-white/80 max-h-[300px] max-w-3xl border-[0.1px] border-blue-600 overflow-y-auto">
             {response}
           </p>
         </div>
