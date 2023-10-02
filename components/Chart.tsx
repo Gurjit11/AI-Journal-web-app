@@ -43,11 +43,11 @@ const Chart = ({ data }) => {
         <Line
           type="monotone"
           dataKey="sentimentScore"
-          stroke="#8884d8"
+          stroke="#ffc50d"
           strokeWidth={2}
           activeDot={{ r: 8 }}
         />
-        <XAxis dataKey="createdAt" stroke="#5550bd" />
+        <XAxis dataKey="createdAt" stroke="#ffc50d" />
         <Tooltip content={<CustomTooltip />} />
       </LineChart>
     </ResponsiveContainer>

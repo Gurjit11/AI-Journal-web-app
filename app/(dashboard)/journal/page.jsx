@@ -27,9 +27,11 @@ const JournalPage = async () => {
   // console.log("entries", entries);
 
   return (
-    <div className="md:px-10 p-2 w-full h-full">
+    <div className="md:px-10 p-2 w-full h-full bg-[url('https://plagiarismdetector.net/pd-imgs/yellow_bg.svg')] bg-right-top bg-contain bg-fixed bg-no-repeat">
       <div className=" flex flex-col md:flex-row justify-between items-center">
-        <span className="text-5xl pt-4 font-semibold">Journal</span>
+        <span className="text-5xl text-[#143642] pt-4 font-semibold">
+          Journal
+        </span>
         <span className=" sm:mt-0 mt-3">
           <Question />
         </span>
@@ -39,7 +41,7 @@ const JournalPage = async () => {
       </div>
       <div className=" h-[0.1px] bg-gray-400"></div>
 
-      <div className="grid md:grid-cols-4 grid-cols-1 gap-4 pt-5">
+      <div className="grid md:grid-cols-4  grid-cols-1 gap-4 pt-5">
         {entries.map((entry) => (
           <Link href={`/journal/${entry.id}`} key={entry.id}>
             <EntryCard entry={entry} />

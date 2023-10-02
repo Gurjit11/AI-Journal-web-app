@@ -17,7 +17,7 @@ const NewEntry = () => {
   return (
     <div
       onClick={handleClick}
-      className="w-fit px-10 cursor-pointer py-4 rounded-md my-2 bg-gradient-to-br from-slate-800 via-slate-900 to-blue-950"
+      className="w-fit px-10 cursor-pointer py-4 rounded-md my-2 bg-sky-900"
     >
       {loading ? (
         "Creating..."
